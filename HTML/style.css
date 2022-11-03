@@ -45,7 +45,20 @@ article{
     color: aliceblue;
 }
 
-nav{
+#middle{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    width: 1300px;
     
+}
+
+ul{
+    background-color: cornflowerblue;
+}
+
+aside{
+    
+    width: 20px;
 }
 
