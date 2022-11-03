@@ -18,22 +18,40 @@ $rendue =[];
 // array_push($rendue,10);
 // echo $rendue;
 
-while($i !== 0){
+
+for($i = $rest; $i >0 ; $i){
     if($rest >=10){
-        $reset = $reset - 10;
-        array_push($rendue,10);
+                $reset = $reset - 10;
+                array_push($rendue,10);
     }elseif($rest >=5){
-        $reset = $reset - 5;
-        array_push($rendue,5);
+                $reset = $reset - 5;
+                array_push($rendue,5);
     }elseif($rest >=2){
-        $reset = $reset - 2;
-        array_push($rendue,2);
+                $reset = $reset - 2;
+                array_push($rendue,2);
     }elseif($rest >=1){
-        $reset = $reset - 1;
-        array_push($rendue,1);
+                $reset = $reset - 1;
+                array_push($rendue,1);
     }
-    $i = $rest;
+            $i = $rest;
+
 }
+// while($i !== 0){
+//     if($rest >=10){
+//         $reset = $reset - 10;
+//         array_push($rendue,10);
+//     }elseif($rest >=5){
+//         $reset = $reset - 5;
+//         array_push($rendue,5);
+//     }elseif($rest >=2){
+//         $reset = $reset - 2;
+//         array_push($rendue,2);
+//     }elseif($rest >=1){
+//         $reset = $reset - 1;
+//         array_push($rendue,1);
+//     }
+//     $i = $rest;
+// }
 
 
 
