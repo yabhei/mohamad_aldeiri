@@ -9,12 +9,17 @@ alors celle-ci est imposable (sinon ce n’est pas le cas, « non imposable »).
 <h2>Résultat</h2>
 
 <?php
-$age =0;
-$sexe = "H";
+$age =20;
+$sexe = "F";
 if($sexe == "H" && $age >20){
+    echo "Age : ".$age."<br>"; echo "Sexe : ".$sexe."<br>";
     echo "La personne est imposable";
 }elseif($sexe == "F" && $age >= 18 && $age <= 35){
+    echo "Age : ".$age."<br>"; echo "Sexe : ".$sexe."<br>";
     echo "La personne est imposable";
+}else{
+    echo "Age : ".$age."<br>"; echo "Sexe : ".$sexe."<br>";
+    echo "Non imposable";
 }
 
 
