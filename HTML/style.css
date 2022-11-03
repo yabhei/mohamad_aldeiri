@@ -1,0 +1,51 @@
+body{
+    background-color: chartreuse;
+}
+
+article{
+/*    
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 10cm;
+    margin-left: 10cm; */
+    width: 1300px;
+    height:fit-content;
+    /* border: 2px solid #bbb; */
+    padding: 1em;
+    margin: 0 auto 0;
+    background-color:aliceblue;
+}
+
+#mg{
+    width: 5cm;
+    height: 7cm;
+}
+
+#smps{
+    width: 1300px;
+    height: 15cm;
+}
+
+#img1{
+    margin: 0px 400px;
+
+}
+
+#titre{
+    width: 1300px;
+    height: 50px;
+    margin: 0px auto;
+    margin-top: 0px;
+    text-align:center;
+    background-color: cornflowerblue;
+}
+#st{
+    margin-top: 0px;
+    font-size:xx-large;
+    color: aliceblue;
+}
+
+nav{
+    
+}
+
