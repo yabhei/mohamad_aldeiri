@@ -1,23 +1,24 @@
 body {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
   background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: fit-content;
 }
 
 #items {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 400px;
+  margin-right: 400px;
 }
 
 #titre {
-  width: 1300px;
+  width: 900px;
   height: 50px;
-  /* margin: 0px auto;
-  margin-top: 0px; */
   text-align: center;
-  background-color: cornflowerblue;
+  background-color: rgb(81, 61, 213);
 }
 
 #st {
@@ -27,7 +28,7 @@ body {
 }
 
 #smps {
-  width: 1300px;
+  width: 900px;
   height: 15cm;
 }
 
@@ -37,18 +38,17 @@ body {
   width: fit-content;
 
   justify-content: space-between;
+
+  margin-left: 400px;
+  margin-right: 400px;
 }
 
 article {
-  /*    
-    margin-top: 0%;
-    margin-bottom: 0%;
-    margin-right: 10cm;
-    margin-left: 10cm; */
-  width: 883px;
+  width: 465px;
   height: fit-content;
   padding: 1em;
-  margin: 0 auto 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
   background-color: aliceblue;
 }
 
@@ -57,35 +57,40 @@ article {
   height: 7cm;
 }
 
-/* #img1 {
-  display: flex;
-  /* margin: 0px 400px; */
-/* justify-content: center;
-  width: 1300px;
-  height: 566.91px;
-} */
-
 ul {
   background-color: rgb(81, 61, 213);
-  /* padding-top: 30px; */
   margin-top: 30px;
+  margin-left: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 5px;
 }
 
+/* La liste */
 #el {
   color: aliceblue;
 }
 
+/* La part de Matt  */
 aside {
-  width: 250px;
+  width: 245px;
   background-color: rgb(81, 61, 213);
   margin-top: 30px;
   margin-bottom: 30px;
   margin-right: 10px;
   text-align: center;
 }
-figcaption {
-  margin-left: 30px;
+
+#name {
+  font-style: italic;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#bottom {
+  background-color: rgb(81, 61, 213);
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-top: 0px;
+  text-align: center;
 }
