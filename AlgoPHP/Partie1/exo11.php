@@ -10,6 +10,7 @@ A partir d’un montant à payer et d’une somme versée pour régler un achat,
 <?php
 
 $x = [];
+$y = 10;
 array_push($x,10);
 
 
