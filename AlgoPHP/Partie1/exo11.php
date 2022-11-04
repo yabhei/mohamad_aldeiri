@@ -1,17 +1,21 @@
-<h1>Exercice 10</h1>
+<h1>Exercice 11</h1>
 
 <p> 
-A partir d’un montant à payer et d’une somme versée pour régler un achat, 
-écrire l’algorithme qui affiche à un utilisateur un rendu de monnaie en nombre de billets de 10 € et 5 €, de pièces de 2 € et 1 €.
+Initialiser un tableau de x marques de voitures. Ecrire un algorithme permettant de parcourir ce
+tableau et d’en afficher le contenu (une marque de voiture par ligne). Il est également demandé
+d’afficher le nombre de marques de voitures présentes dans le tableau.
+
 </p>
 
 <h2>Résultat</h2>
 
 <?php
 
-$x = [];
-$y = 10;
-array_push($x,10);
+$cars = [" Peugeot", "Renault", "BMW", "Mercedes"];
+echo "Il y a ".count($cars)." marques de voitures dans le tableau : <br>";
+for($i=0;$i<count($cars);$i++){
+    echo $cars[$i]."<br>";
+}
 
 
 
