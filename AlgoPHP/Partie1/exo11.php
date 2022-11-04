@@ -11,7 +11,8 @@ A partir d’un montant à payer et d’une somme versée pour régler un achat,
 
 $x = [];
 array_push($x,10);
-// print_r($x);
+
+
 
 
 ?>
