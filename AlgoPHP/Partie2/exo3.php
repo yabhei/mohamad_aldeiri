@@ -7,7 +7,7 @@ Afficher un lien hypertexte permettant d’accéder au site d’Elan Formation. 
 
 </p>
 
-<h2> Résultat</h2>
+<h2> Résultat /h2>
 
 
 <a href="https://elan-formation.eu/accueil" target="_blank">Elan Formation</a>
