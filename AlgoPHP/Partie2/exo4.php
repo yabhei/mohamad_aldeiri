@@ -43,11 +43,12 @@
         </tr>
 
         <?php
-    $capitales = array("France"=>"Paris","Allemagne"=>"Berlin", "USA"=>"washington","Italie"=>"Rome");
-    function afficherTableHTML($cap){
-        ksort($cap);
-        
-        foreach($cap as $pays => $villes){ ?>
+        $capitales = array("France" => "Paris", "Allemagne" => "Berlin", "USA" => "washington", "Italie" => "Rome");
+        function afficherTableHTML($cap)
+        {
+            ksort($cap);
+
+            foreach ($cap as $pays => $villes) { ?>
         <tr>
             <td>
                 <?php echo strtoupper($pays) ?>
@@ -55,22 +56,23 @@
             <td>
                 <?php echo $villes ?>
             </td>
-            <?php if($pays == "ALLEMAGNE" ){?>
+            <?php if ($pays == "Allemagne") { ?>
             <td> <a href="https://fr.wikipedia.org/wiki/Berlin">Lien</a> </td>
-            <?php } elseif($pays == "FRANCE"){?>
+            <?php } elseif ($pays == "France") { ?>
             <td><a href="https://fr.wikipedia.org/wiki/Paris">Lien</a></td>
-            <?php} elseif($pays == "USA"){?>
+
+            <?php } elseif ($pays == "Italie") { ?>
+            <td><a href="https://en.wikipedia.org/wiki/Rome">Lien</a></td>
+            <?php } elseif ($pays == "USA") { ?>
             <td><a href="https://en.wikipedia.org/wiki/Washington,_D.C.">Lien</a></td>
-            <?php} elseif($pays == "ITALIE"){?>
-            <td><a href="https://en.wikipedia.org/wiki/Rome"></a>Lien</td>
-            <?php}?>
+            <?php } ?>
 
         </tr>
 
         <?php } ?>
         <?php }
-    afficherTableHTML($capitales);
-    ?>
+        afficherTableHTML($capitales);
+        ?>
 
     </table>
 
