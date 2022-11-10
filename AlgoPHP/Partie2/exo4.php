@@ -48,24 +48,17 @@
         {
             ksort($cap);
 
-            foreach ($cap as $pays => $villes) { ?>
+            foreach ($cap as $pays => $ville) { ?>
         <tr>
             <td>
                 <?php echo strtoupper($pays) ?>
             </td>
             <td>
-                <?php echo $villes ?>
+                <?php echo $ville ?>
             </td>
-            <?php if ($pays == "Allemagne") { ?>
-            <td> <a href="https://fr.wikipedia.org/wiki/Berlin">Lien</a> </td>
-            <?php } elseif ($pays == "France") { ?>
-            <td><a href="https://fr.wikipedia.org/wiki/Paris">Lien</a></td>
 
-            <?php } elseif ($pays == "Italie") { ?>
-            <td><a href="https://en.wikipedia.org/wiki/Rome">Lien</a></td>
-            <?php } elseif ($pays == "USA") { ?>
-            <td><a href="https://en.wikipedia.org/wiki/Washington,_D.C.">Lien</a></td>
-            <?php } ?>
+            <td> <a href="https://fr.wikipedia.org/wiki/<?php echo $ville ?>">Lien</a> </td>
+
 
         </tr>
 

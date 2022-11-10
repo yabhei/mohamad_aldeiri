@@ -14,12 +14,12 @@
     <?php
 
     $elements = ["Monsieur", "Madame", "Mademoiselle"];
-    function alimenterListeDeroulante($elem)
+    function alimenterListeDeroulante($elems)
     { ?>
     <select name="civilité" id="civil">
         <option value="">--choisissez votre civilité--</option>
-        <?php foreach ($elem as $el) { ?>
-        <option value="m">
+        <?php foreach ($elems as $el) { ?>
+        <option value="<?php $el ?>">
             <?php echo $el ?>
         </option>
         <?php } ?>

@@ -14,9 +14,9 @@
 
   function afficherInput($arrnoms)
   {
-    foreach ($arrnoms as $x) { ?>
+    foreach ($arrnoms as $nom) { ?>
   <label for="lname">
-    <?php echo $x ?>
+    <?php echo $nom ?>
   </label> <br />
   <input type="text" id="lname" name="fname" /> <br>
   <?php } ?>

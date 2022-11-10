@@ -1,7 +1,7 @@
 <?php
 function formaterDateFr($dat)
 {
-    list($day, $month, $year) = explode("-", $dat);
+    list($day, $year) = explode("-", $dat);
 
     $newDated = date('l', strtotime($dat));
     $newDatem = date('F', strtotime($dat));
