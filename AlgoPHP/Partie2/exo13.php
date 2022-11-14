@@ -16,13 +16,17 @@ class Voiture {
         // $this->vitesseActuelle= $vitesse;
     }
 
+    public function __toString() {
+         return $this->marque." ".$this->modele; 
+        }
+
     public function demarrer(){
         $this->flag = true;
         echo "Le véhicule ".$this->marque." démarrre <br>";
     }
 
     public function accelerer($acc){
-        if($this->flag == true){
+        if($this->flag){
         $this->vitesseActuelle=$this->vitesseActuelle + $acc;
         echo "Le véhicule ".$this->marque." accélère de ".$this->vitesseActuelle." km/h <br>";
         } else{
@@ -47,13 +51,13 @@ class Voiture {
     }
 
     public function getvitesse(){
-        return "La vitesse du vihécule ".$this->marque." ".$this->modele." est de : ".$this->vitesseActuelle." km/h <br>";
+        return "La vitesse du vihécule ".$this." est de : ".$this->vitesseActuelle." km/h <br>";
     }
 
     public function printinfo(){
         echo "<br> <br> Info véhicule ".$this->marque." : <br>";
         echo "***************** <br>";
-        echo "Nome et Modéle du véhicule : ".$this->marque." ".$this->modele."<br>";
+        echo "Nome et Modéle du véhicule : ".$this."<br>";
         echo "Nombre de porte : ".$this->nbPortes."<br>";
         if($this->flag == true || $this->vitesseActuelle > 0){
             echo "Le véhicule ".$this->marque." est démarré <br>";
