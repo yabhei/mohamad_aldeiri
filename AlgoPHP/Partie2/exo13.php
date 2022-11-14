@@ -47,7 +47,7 @@ class Voiture {
     }
 
     public function getvitesse(){
-       echo "La vitesse du vihécule ".$this->marque." ".$this->modele." est de : ".$this->vitesseActuelle." km/h <br>";
+        return "La vitesse du vihécule ".$this->marque." ".$this->modele." est de : ".$this->vitesseActuelle." km/h <br>";
     }
 
     public function printinfo(){
@@ -70,7 +70,7 @@ $v1 = new Voiture("Peugeot","408",5);
 $v1->setvitesse(50);
 $v1->printinfo();
 $v1->demarrer();
-$v1->getvitesse();
+echo $v1->getvitesse();
 $v1->ralentir(20);
 $v1->getvitesse();
 
@@ -80,7 +80,7 @@ $v2->accelerer(20);
 $v2->demarrer();
 $v2->accelerer(20);
 $v2->stopper();
-$v2->getvitesse();
+echo $v2->getvitesse();
 
 
 
