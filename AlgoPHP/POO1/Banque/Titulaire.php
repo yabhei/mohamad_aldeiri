@@ -1,17 +1,17 @@
 <?php
 
-require "Compte_Bancaire.php";
+// require "Compte_Bancaire.php";
 class Titulaire
 {
-    private $nom;
-    private $prénom;
+    public $nom;
+    public $prénom;
     private $datedenaissance;
     private $ville;
-    private array $sescomptes;
+    public array $sescomptes;
 
-    private CompteBancaire $cbo;
 
-    public function __construct($nom, $pre, $datedn, $ville, CompteBancaire $cb)
+
+    public function __construct($nom, $pre, $datedn, $ville)
     {
         // parent::__construct($libt, $solt, $devt, $titunique);
 
@@ -19,9 +19,10 @@ class Titulaire
         $this->prénom = $pre;
         $this->datedenaissance = $datedn;
         $this->ville = $ville;
-        $this->sescomptes[] = $cb->libellé;
+        $this->sescomptes = [];
 
     }
+
 
     public function setnom($name)
     {
@@ -73,16 +74,22 @@ class Titulaire
         return print_r($this->sescomptes);
     }
 
+    public function age($strdate)
+    {
+        $obd = new DateTime($strdate);
+        $otod = new DateTime();
+        $diff = $otod->diff($obd);
+        return $diff->y;
+    }
+
     public function printoftitulaire()
     {
-        echo "Nom: {$this->nom} <br> Prénom : {$this->prénom} <br> Date de nissance : {$this->datedenaissance} <br> 
+        echo "Nom: {$this->nom} <br> 
+        Prénom : {$this->prénom} <br> 
+        Date de nissance : " . $this->age($this->datedenaissance) . " <br> 
         Ville : {$this->ville} <br> Comptes : ";
         print_r($this->sescomptes);
         echo "<br>";
-        $this->cbo->printofCB();
-
-        // $cb0->printofCB();
-        // $this->printofCB();
 
     }
 

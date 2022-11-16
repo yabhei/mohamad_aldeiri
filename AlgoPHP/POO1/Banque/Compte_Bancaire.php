@@ -7,18 +7,22 @@ class CompteBancaire
     private $libellé;
     private $solde_init;
     private $devise;
-    private $titulaire;
+    private Titulaire $titulaire;
 
-    public function __construct($libl, $solde, $dev, $titu)
+    public function __construct($libl, $solde, $dev, Titulaire $titu)
     {
-        // $this->titulaire = $titu;
+
 
         $this->libellé = $libl;
+
         $this->solde_init = $solde;
         $this->devise = $dev;
         $this->titulaire = $titu;
+        $this->titulaire->sescomptes[] = $libl;
 
     }
+
+
 
     public function setlibelle($lib)
     {
@@ -64,18 +68,23 @@ class CompteBancaire
     {
         $this->solde_init = $this->solde_init + $mont;
     }
-
     public function débiter($mont)
     {
         $this->solde_init = $this->solde_init - $mont;
     }
 
+    public function virement()
+    {
+
+    }
 
 
     public function printofCB()
     {
         echo "Libellé : {$this->libellé} <br> Solde initial : {$this->solde_init} <br> 
-        Devise Monitaire : {$this->devise} <br> Titulaire : {$this->titulaire} <br>";
+        Devise Monitaire : {$this->devise} <br> Titulaire : ";
+        echo $this->titulaire->nom . " " . $this->titulaire->prénom;
+        echo "<br>";
     }
 
 
