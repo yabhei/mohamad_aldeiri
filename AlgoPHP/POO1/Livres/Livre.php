@@ -1,6 +1,6 @@
 <?php
 
-
+require "Auteur.php";
 class Livre
 {
 
@@ -8,7 +8,20 @@ class Livre
     private $nombredepages;
     private $parution;
     private $prix;
-    private $auteur;
+    private Auteur $auteur;
+
+
+    public function __construct($tit,$nmdp,$paru,$pri,$au)
+    {
+
+        $this->titre=$tit;
+        $this->nombredepages=$nmdp;
+        $this->parution=$paru;
+        $this->prix=$pri;
+        $this->auteur=$au;
+
+        
+    }
 
 
     public function settitre($ti){
@@ -43,6 +56,9 @@ class Livre
     public function getauteur(){
         return $this->auteur;
     }
+
+
+
     
  
 

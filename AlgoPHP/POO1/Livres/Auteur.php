@@ -1,11 +1,21 @@
 <?php
 
+// require "Livre.php";
 
 class Auteur
 {
 
     private $nom;
     private $prenom;
+
+    public  $livres =array();
+
+    public function __construct($nnm,$prr)
+    {
+        $this->nom=$nnm;
+        $this->prenom=$prr;
+        $this->livres=[];
+    }
    
 
 
@@ -24,10 +34,23 @@ class Auteur
     public function getprenom(){
         return $this->prenom;
     }
+
+
+    public function __toString(){
+        return $this->nom. " ". $this->prenom;
+    }
+
+    public function  afficherBibliographie(){
+        echo $this->nom." ". $this->prenom;
+    }
    
  
 
 }
+
+
+$k = new Auteur("king","andari");
+$k->afficherBibliographie();
 
 
 ?>
