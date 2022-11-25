@@ -22,12 +22,15 @@ class Film
     {
         $this->titre = $tit;
         $this->datedesortie = $dateds;
+        // $time = explode(':', $dure);
+        // $min = ($time[0]*60) + ($time[1]) + ($time[2]/60);
         $this->durée = $dure;
         $this->résumé = $resum;
+        $this->genref=$genref;
         $this->realisateur=$realis;
-        $this->realisateur->ajouterfilmReal($this);
+        $this->realisateur->ajouterfilmReal($this->titre);
         $this->acteur=$act;
-        $this->acteur->ajouterfilmAct($this);
+        $this->acteur->ajouterfilmAct($this->titre);
         $this->genre=$gen;
         $this->genre->ajouterfilmGen($this, $genref);
         $this->role=$rol;

@@ -12,11 +12,20 @@ class Realisateur extends Personne
         parent::__construct($rnom, $rpre, $rsexe, $rdden);
         $this->rfilms = [];
     }
-    public function ajouterfilmReal(Film $flm)
+    public function ajouterfilmReal($flm)
     {
         $this->rfilms[] = $flm;
 
     }
+
+    public function ListefilmofReal(){
+        echo "The films of the director ".$this->nom ." ".$this->prénom." are : <br>";
+        foreach($this->rfilms as $filreal){
+           echo $filreal."</br>";
+           }
+        
+        }
+
 
 
 }

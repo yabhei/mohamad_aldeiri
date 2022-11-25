@@ -15,14 +15,14 @@ class Acteur extends Personne
 
 
 
-    public function ajouterfilmAct(Film $flm)
+    public function ajouterfilmAct($flm)
     {
         $this->actinfilms[] = $flm;
 
     }
 
     public function ListefilmofAct(){
-        echo "The films of ".$this->nom." are : <br>";
+        echo "The films of the actor ".$this->nom." ".$this->prénom." are : <br>";
         foreach($this->actinfilms as $filact){
            echo $filact."</br>";
            }
