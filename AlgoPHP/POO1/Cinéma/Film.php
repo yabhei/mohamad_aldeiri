@@ -1,5 +1,7 @@
 <?php
-
+ spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
 class Film
 {
     private $titre;
@@ -15,16 +17,22 @@ class Film
     private Casting $cast;
 
 
-    public function __construct($tit, $dateds, $dure, $resum, $genref, $rolef, Realisateur $realis, Acteur $act, Genre $gen, Role $rol, Casting $cas)
+    public function __construct($tit, $dateds, $dure, $resum, $genref, 
+    Realisateur $realis, Acteur $act, Genre $gen, Role $rol, Casting $cas)
     {
         $this->titre = $tit;
         $this->datedesortie = $dateds;
         $this->durée = $dure;
         $this->résumé = $resum;
-        $this->realisateur->Rajouterfilm($this);
-        $this->acteur;
-        $this->genre->ajouterfilmG($this, $genref);
-        $this->role->ajouterfilmR($rolef, $act);
+        $this->realisateur=$realis;
+        $this->realisateur->ajouterfilmReal($this);
+        $this->acteur=$act;
+        $this->acteur->ajouterfilmAct($this);
+        $this->genre=$gen;
+        $this->genre->ajouterfilmGen($this, $genref);
+        $this->role=$rol;
+        $this->role->ajouterfilmRol();
+        $this->cast=$cas;
 
 
     }
@@ -80,12 +88,11 @@ class Film
 
     public function __toString()
     {
-        return "Titre : " . $this->titre . " <br>Date de sortie : " . $this->datedesortie . "<br> Durée :  " . $this->durée . "<br> Genre :  " . $this->genre . "<br> Résumé :  " . $this->résumé;
+        return "Titre : " . $this->titre . " <br>Date de sortie : " . $this->datedesortie . "<br> Durée :  " . $this->durée .
+         "<br> Genre :  " . $this->genref . "<br> Résumé :  " . $this->résumé;
     }
 
-
-
-
+    
 }
 
 

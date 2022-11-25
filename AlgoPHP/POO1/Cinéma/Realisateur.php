@@ -12,7 +12,7 @@ class Realisateur extends Personne
         parent::__construct($rnom, $rpre, $rsexe, $rdden);
         $this->rfilms = [];
     }
-    public function Rajouterfilm(Film $flm)
+    public function ajouterfilmReal(Film $flm)
     {
         $this->rfilms[] = $flm;
 

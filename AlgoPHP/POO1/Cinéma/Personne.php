@@ -2,10 +2,10 @@
 
 class Personne
 {
-    private $nom;
-    private $prénom;
-    private $sexe;
-    private $datedeN;
+    public $nom;
+    public $prénom;
+    public $sexe;
+    public $datedeN;
 
     public function __construct($pnom, $ppre, $psexe, $pdden)
     {
