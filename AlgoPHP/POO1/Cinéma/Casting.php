@@ -5,42 +5,64 @@
 class Casting
 {
 
-    private array $casarr;
-    private $casrole;
-    private $casactnom;
-    public function __construct($crole,$cactn){
-        $this->casrole=$crole;
-        $this->casactnom=$cactn;
-        $this->casarr=[];
+ 
+    public Film $filmcast;
+    public Acteur $actcast;
+    public Role $rolecast;
+
+    public function __construct($casrole,$casact,$casfilm){
+        $this->filmcast=$casfilm;
+        $casact->addcasting($this);
+        $this->actcast=$casact;
+        $casfilm->addcasting($this);
+        $this->rolecast=$casrole;
+        $casrole->addcasting($this);
     }
 
-    public function getcasrole()
-    {
-        return $this->casrole;
-
+    public function __toString(){
+       return $this->actcast." ".$this->filmcast." ".$this->rolecast; 
     }
 
-    public function setcasrole($casr)
-    {
-        $this->casrole = $casr;
-
-    }
-
-    public function getcasactnom()
-    {
-        return $this->casactnom;
+    public function displayallcasting(){
+        echo $this->actcast." a joué dans ".$this->filmcast->titre." comme ".$this->rolecast->roleR." <br>";
 
     }
 
-    public function setcasactnom($casno)
-    {
-        $this->casactnom = $casno;
 
-    }
 
-    // public function ajouterCasting(){
+
+
+
+
+
+
+
+
+    // public function getcasrole()
+    // {
+    //     return $this->casrole;
 
     // }
+
+    // public function setcasrole($casr)
+    // {
+    //     $this->casrole = $casr;
+
+    // }
+
+    // public function getcasactnom()
+    // {
+    //     return $this->casactnom;
+
+    // }
+
+    // public function setcasactnom($casno)
+    // {
+    //     $this->casactnom = $casno;
+
+    // }
+
+   
     
 
 

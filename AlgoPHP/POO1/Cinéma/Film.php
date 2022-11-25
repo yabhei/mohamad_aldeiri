@@ -4,12 +4,13 @@
 });
 class Film
 {
-    private $titre;
+    public $titre;
     private $datedesortie;
     private $durée;
     private $résumé;
     private $genref;
     private $rolef;
+    private array $arrcast;
     public Realisateur $realisateur;
     public Acteur $acteur;
     private Genre $genre;
@@ -18,7 +19,7 @@ class Film
 
 
     public function __construct($tit, $dateds, $dure, $resum, $genref, 
-    Realisateur $realis, Acteur $act, Genre $gen, Role $rol, Casting $cas)
+    Realisateur $realis, Acteur $act, Genre $gen, Role $rol)
     {
         $this->titre = $tit;
         $this->datedesortie = $dateds;
@@ -27,6 +28,7 @@ class Film
         $this->durée = $dure;
         $this->résumé = $resum;
         $this->genref=$genref;
+        $this->arrcast=[];
         $this->realisateur=$realis;
         $this->realisateur->ajouterfilmReal($this->titre);
         $this->acteur=$act;
@@ -35,7 +37,7 @@ class Film
         $this->genre->ajouterfilmGen($this, $genref);
         $this->role=$rol;
         $this->role->ajouterfilmRol();
-        $this->cast=$cas;
+        // $this->cast=$cas;
 
 
     }
@@ -93,6 +95,18 @@ class Film
     {
         return "Titre : " . $this->titre . " <br>Date de sortie : " . $this->datedesortie . "<br> Durée :  " . $this->durée .
          "<br> Genre :  " . $this->genref . "<br> Résumé :  " . $this->résumé;
+    }
+
+    public function addcasting(Casting $cast){
+        $this->arrcast[]=$cast;
+    }    
+
+    public function discasting(){
+        $show = "le film ".$this->titre." a été joué par : <br>";
+        foreach($this->arrcast as $castel) {
+            $show.= $castel->actcast." comme ". $castel->rolecast."<br>";
+        }
+        return $show;
     }
 
     

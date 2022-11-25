@@ -4,14 +4,16 @@
 
 class Role
 {
-    private $roleR;
+    public $roleR;
     private $nomActR;
+    private array $arrcast;
     private array $rolfilms; //array of acters by roles
     public function __construct($rol,$act)
     {
         $this->roleR=$rol;
         $this->nomActR=$act;
          $this->rolfilms=[];
+         $this->arrcast =[];
     }
 
     public function getroleR()
@@ -51,6 +53,19 @@ class Role
            }
         
         }
+    }
+
+
+    public function addcasting(Casting $cast){
+        $this->arrcast[]=$cast;
+    }    
+
+    public function discasting(){
+        $show = "le role ".$this." a été joué par : <br>";
+        foreach($this->arrcast as $castel) {
+            $show.= $castel->actcast." dans ". $castel->filmcast->titre."<br>";
+        }
+        return $show;
     }
 
 
