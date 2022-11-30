@@ -31,7 +31,7 @@ class Equipe
     public function ShowPlayers() // to display all players in the team
 
     {
-        echo "<h3>" . $this->noméquipe . " : </h3>" . "<br> <h5>" . $this->pays->nompays . " _ " . $this->date_fondation . " </h5> <br>";
+        echo $this->noméquipe . "<br>" . $this->pays->nompays . " _ " . $this->date_fondation . " <br>";
 
         foreach ($this->arrjoueurs as $player) {
             echo $player->joueur->prénom . " " . $player->joueur->nom . "(" . $player->anneeDebut . ") <br>";
