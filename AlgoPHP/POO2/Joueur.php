@@ -17,6 +17,8 @@ class Joueur
 
     }
 
+
+
     public function __toString()
     {
         return $this->prénom . " " . $this->nom;
@@ -32,12 +34,14 @@ class Joueur
     public function ShowTeams() // to display all teams of player
 
     {
-        echo $this->prénom . " " . $this->nom . "<br>";
-        echo $this->nationalité . " _ " . $this->age . " ans <br>";
+        $show = "<div> <h1>" . $this->prénom . " " . $this->nom . "</h1><p>" . $this->nationalité . " _ " . $this->age . "</p></div><ul>";
+
         foreach ($this->arrequipes as $unequipe) {
 
-            echo $unequipe->équipe->noméquipe . "(" . $unequipe->anneeDebut . ") <br>";
+            $show .= "<li>" . $unequipe->équipe->noméquipe . "(" . $unequipe->anneeDebut . ") </li><br>";
         }
+        $show .= "</ul>";
+        return $show;
     }
 
 
